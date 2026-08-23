@@ -1,0 +1,11 @@
+{
+  "name": "Ayush Gaur",
+  "email": "ayush@clientflow.com",
+  "password": "Ayush@12345",
+  "companyName": "Ayush Web Solutions",
+  "companyDescription": "Web development and digital solutions",
+  "won problem":"If i mark won to a lead, the bar shows won but if i unmark it another day the mark of won is removed from remove and can't become mark of that day",
+
+  "solution":" won and lost mark are permanent they can't be changed "
+
+}
