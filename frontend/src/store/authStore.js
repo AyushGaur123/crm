@@ -48,14 +48,14 @@ const useAuthStore = create((set) => ({
   },
 
 
-  // Get current admin from backend
+
   loadUser: async () => {
     const token =
       localStorage.getItem(
         "leadflow_token"
       );
 
-    // No token means not logged in
+
     if (!token) {
       set({
         user: null,
@@ -87,7 +87,7 @@ const useAuthStore = create((set) => ({
         error
       );
 
-      // Token is invalid/expired
+     
       localStorage.removeItem(
         "leadflow_token"
       );
