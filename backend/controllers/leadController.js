@@ -756,59 +756,6 @@ const getLeadStats = async (req, res) => {
 };
 
 
-
-
-
-
-// const getFollowUps = async (req, res) => {
-//   try {
-//     const now = new Date();
-
-//     const startOfToday = new Date(now);
-//     startOfToday.setHours(0, 0, 0, 0);
-
-//     const endOfToday = new Date(now);
-//     endOfToday.setHours(23, 59, 59, 999);
-
-//     const upcomingLimit = new Date(endOfToday);
-//     upcomingLimit.setDate(upcomingLimit.getDate() + 30);
-
-//     const baseQuery = {
-//       companyId: req.user._id,
-//       status: { $nin: ["won", "lost"] },
-//       followUpDate: { $ne: null },
-//     };
-
-//     const overdue = await Lead.find({
-//       ...baseQuery,
-//       followUpDate: { $lt: startOfToday },
-//     }).sort({ followUpDate: 1 });
-
-//     const today = await Lead.find({
-//       ...baseQuery,
-//       followUpDate: { $gte: startOfToday, $lte: endOfToday },
-//     }).sort({ followUpDate: 1 });
-
-//     const upcoming = await Lead.find({
-//       ...baseQuery,
-//       followUpDate: { $gt: endOfToday, $lte: upcomingLimit },
-//     }).sort({ followUpDate: 1 });
-
-//     res.status(200).json({
-//       success: true,
-//       overdue,
-//       today,
-//       upcoming,
-//     });
-//   } catch (error) {
-//     console.error("GET FOLLOW UPS ERROR:", error);
-//     res.status(500).json({
-//       success: false,
-//       message: error.message,
-//     });
-//   }
-// };
-
 const getFollowUps = async (req, res) => {
   try {
     const now = new Date();
