@@ -1,4 +1,4 @@
-import { LayoutDashboard, Users, BarChart3, LogOut, X, Home,} from "lucide-react";
+import { LayoutDashboard, Users, BarChart3, LogOut, X, Home, Handshake,} from "lucide-react";
 
 import { NavLink } from "react-router-dom";
 
@@ -60,7 +60,7 @@ function Sidebar() {
             bg-indigo-600
             font-bold text-white
           ">
-            L
+           <Handshake size={20} />
           </div>
 
           <div>

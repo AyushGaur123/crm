@@ -232,14 +232,32 @@ function Login() {
                 </p>
               )}
             </div>
-            <p className="mt-2 text-sm text-slate-500 dark:text-slate-400 whitespace-nowrap">
-              Don't have an account?{" "}
-              <a
-                href="/register"
-                className="font-medium text-blue-600 hover:underline dark:text-blue-400"
+
+            <p
+              className="
+              mt-3
+              text-center
+              text-xs
+              text-slate-500
+              dark:text-slate-400
+            "
+            >
+              Already have an account?{" "}
+
+              <button
+                type="button"
+                onClick={() =>
+                  navigate("/register")
+                }
+                className="
+                font-semibold
+                text-indigo-600
+                hover:text-indigo-700
+                dark:text-indigo-400
+              "
               >
-                sign up
-              </a>
+                Sign up
+              </button>
             </p>
 
 

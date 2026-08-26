@@ -1,36 +1,65 @@
 import { useEffect, useState } from "react";
-import {ArrowRight, ArrowUpRight, BarChart3, Check, ChevronDown, Database, Handshake, Lightbulb, Menu, MessageCircle, Moon, Sparkles, Sun, Target, TrendingUp,UserRound, Users, Workflow, X, Zap,} from "lucide-react";
+import { ArrowRight, ArrowUpRight, BarChart3, Check, ChevronDown, Database, Handshake, Lightbulb, Menu, MessageCircle, Moon, Sparkles, Sun, Target, TrendingUp, UserRound, Users, Workflow, X, Zap, } from "lucide-react";
 import ThemeToggle from "../components/common/ThemeToggle";
+import imageA from "../assets/imageA.avif"
+import imageB from "../assets/imageB.avif"
+import imageC from "../assets/imageC.avif"
+import imageD from "../assets/imageD.avif"
+import imageE from "../assets/imageE.avif"
+import imageF from "../assets/imageF.avif"
+import imageG from "../assets/imageG.avif"
 
 function Home() {
 
   const [mobileMenu, setMobileMenu] = useState(false);
 
-   return (
+  return (
     <div className="min-h-screen overflow-hidden bg-white text-slate-900 transition-colors duration-500 dark:bg-[#07101f] dark:text-white">
 
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl dark:border-white/10 dark:bg-[#07101f]/80">
 
         <div className="mx-auto flex h-[74px] max-w-7xl items-center justify-between px-5 lg:px-8">
 
-  
-          <a
-            href="#home"
-            className="flex items-center gap-2.5"
-          >
-            <div className="grid h-10 w-10 place-items-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/20">
-              <Handshake size={20} />
-            </div>
 
-            <div className="font-bold tracking-tight">
-              <span className="text-slate-900 dark:text-white">
-                Mini
-              </span>
-              <span className="text-blue-600">
-                CRM
-              </span>
+          <div className="
+              flex h-20
+             items-center
+             border-b
+               border-slate-200
+               px-6
+               dark:border-slate-800
+             ">
+            <div className="
+          flex items-center gap-3
+        ">
+              <div className="
+            flex h-10 w-10
+            items-center justify-center
+            rounded-xl
+            bg-indigo-600
+            font-bold text-white
+          ">
+                <Handshake size={20} />
+              </div>
+
+              <div>
+                <h1 className="
+              font-bold
+            ">
+                  <a href="#home">LeadFlow</a>
+
+                </h1>
+
+                <p className="
+              text-xs
+              text-slate-500
+              dark:text-slate-400
+            ">
+                  Client CRM
+                </p>
+              </div>
             </div>
-          </a>
+          </div>
 
 
           <nav className="hidden items-center gap-8 md:flex">
@@ -68,13 +97,13 @@ function Home() {
 
           <div className="hidden items-center gap-4 md:flex">
 
-            <ThemeToggle/>
+            <ThemeToggle />
 
             <a
-              href="#getting-started"
+              href="/login"
               className="rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5 hover:bg-blue-700"
             >
-              Get Started
+             Login
             </a>
 
           </div>
@@ -245,7 +274,7 @@ function Home() {
               <div className="absolute bottom-0 right-0 h-[88%] w-[82%] rounded-[100px_30px_100px_30px] bg-blue-600 transition-transform duration-700 hover:rotate-1" />
 
               <img
-                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
+                src={imageB}
                 alt="Business team having a meeting"
                 className="absolute right-5 top-5 h-[87%] w-[88%] rounded-[30px_100px_30px_100px] object-cover shadow-2xl transition duration-700 hover:scale-[1.02]"
               />
@@ -316,7 +345,7 @@ function Home() {
               <div className="absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-blue-600/10" />
 
               <img
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1100&q=85"
+                src={imageC}
                 alt="People discussing business in an office"
                 className="relative h-[500px] w-full rounded-[40px_12px_40px_12px] object-cover shadow-2xl"
               />
@@ -630,13 +659,13 @@ function Home() {
             <div className="relative grid min-h-[500px] grid-cols-2 gap-5">
 
               <img
-                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85"
+                src={imageD}
                 alt="Office team collaborating"
                 className="mt-12 h-[350px] w-full rounded-[100px_20px_100px_20px] object-cover shadow-xl transition duration-500 hover:-translate-y-3"
               />
 
               <img
-                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=85"
+                src={imageE}
                 alt="Business people working together"
                 className="h-[350px] w-full rounded-[20px_100px_20px_100px] object-cover shadow-xl transition duration-500 hover:-translate-y-3"
               />
@@ -661,7 +690,7 @@ function Home() {
             <div className="relative">
 
               <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1100&q=85"
+                src={imageF}
                 alt="Business analytics dashboard"
                 className="h-[500px] w-full rounded-[30px_100px_30px_100px] object-cover shadow-2xl"
               />
@@ -767,7 +796,7 @@ function Home() {
               <div className="relative">
 
                 <img
-                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=85"
+                  src={imageA}
                   alt="Customer support team"
                   className="h-[400px] w-full rounded-[100px_20px_100px_20px] object-cover shadow-2xl"
                 />
@@ -877,7 +906,7 @@ function Home() {
                 <div className="absolute -inset-5 rounded-[80px] bg-blue-600/10 blur-2xl" />
 
                 <img
-                  src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1100&q=85"
+                  src={imageG}
                   alt="Professionals collaborating in an office"
                   className="relative h-[500px] w-full rounded-[20px_100px_20px_100px] object-cover shadow-2xl"
                 />
@@ -1025,7 +1054,7 @@ function Home() {
                     className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-white/10"
                   >
                     Contact
-                      <MessageCircle size={17} />
+                    <MessageCircle size={17} />
 
                   </a>
 
@@ -1041,39 +1070,54 @@ function Home() {
 
       </main>
 
-
-     
-
       <footer className="border-t border-slate-200 bg-white dark:border-white/10 dark:bg-[#07101f]">
 
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 px-5 py-10 sm:flex-row sm:items-center lg:px-8">
-
-          <div>
-
-            <a
-              href="#home"
-              className="flex items-center gap-2"
-            >
-
-              <div className="grid h-9 w-9 place-items-center rounded-lg bg-blue-600 text-white">
-                <Handshake size={17} />
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 px-5 py-3 sm:flex-row sm:items-center lg:px-8">
+        
+          <div className="
+              flex h-20
+             items-center
+             border-b
+               border-slate-200
+               px-6
+               dark:border-slate-800
+             ">
+            <div className="
+          flex items-center gap-3
+        ">
+              <div className="
+            flex h-10 w-10
+            items-center justify-center
+            rounded-xl
+            bg-indigo-600
+            font-bold text-white
+          ">
+                <Handshake size={20} />
               </div>
 
-              <span className="font-bold">
-                Mini<span className="text-blue-600">CRM</span>
-              </span>
+              <div>
+                <h1 className="
+              font-bold
+            ">
+                  <a href="#home">LeadFlow</a>
 
-            </a>
+                </h1>
 
-            <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">
-              Better relationships. Better business.
-            </p>
-
+                <p className="
+              text-xs
+              text-slate-500
+              dark:text-slate-400
+            ">
+                  Client CRM
+                </p>
+              </div>
+            </div>
+           
           </div>
 
 
           <p className="text-xs text-slate-500 dark:text-slate-400">
-            © {new Date().getFullYear()} MiniCRM. All rights reserved.
+            © {new Date().getFullYear()} LeadFlow. All rights reserved.
           </p>
 
         </div>

@@ -63,43 +63,6 @@ function Register() {
       "
     >
 
-      {/* Back button */}
-
-      <button
-        type="button"
-        onClick={() => navigate(-1)}
-        className="
-          fixed
-          left-4
-          top-4
-          z-10
-          flex
-          items-center
-          gap-1.5
-          rounded-lg
-          border
-          border-slate-200
-          bg-white
-          px-3
-          py-1.5
-          text-xs
-          font-medium
-          text-slate-600
-          shadow-sm
-          transition
-          hover:bg-slate-50
-          dark:border-slate-800
-          dark:bg-slate-900
-          dark:text-slate-300
-          dark:hover:bg-slate-800
-        "
-      >
-        <ArrowLeft size={14} />
-        Back
-      </button>
-
-
-      {/* Theme */}
 
       <div
         className="

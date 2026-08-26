@@ -10,6 +10,8 @@ import {
 import { motion } from "framer-motion";
 import useAuthStore from "../store/authStore";
 import FollowUpSection from "../components/admin/FollowUpSection";
+import imageA from '../assets/imageA.avif';
+import imageB from '../assets/imageB.avif';
 
 function getGreeting() {
   const hour = new Date().getHours();
@@ -219,7 +221,7 @@ function Admin() {
               className="absolute right-0 top-6 z-20 w-[75%] overflow-hidden rounded-3xl border-8 border-white shadow-2xl dark:border-gray-800"
             >
               <img
-                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
+                src={imageA}
                 alt="Business team meeting"
                 className="h-[280px] w-full object-cover"
               />
@@ -250,7 +252,7 @@ function Admin() {
               className="absolute bottom-2 left-0 z-30 w-[55%] overflow-hidden rounded-3xl border-8 border-white shadow-2xl dark:border-gray-800"
             >
               <img
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=85"
+                src={imageB}
                 alt="Team collaboration"
                 className="h-[220px] w-full object-cover"
               />
