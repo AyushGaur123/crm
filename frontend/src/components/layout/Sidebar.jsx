@@ -26,63 +26,99 @@ const links = [
   }
 ];
 
-function Sidebar() {
+function Sidebar({ isOpen = false, onClose = () => {} }) {
   const { logout } = useAuthStore();
 
   return (
-    <aside className="
-      fixed left-0 top-0
-      z-40 hidden h-screen
-      w-64
-      border-r
-      border-slate-200
-      bg-white
-      dark:border-slate-800
-      dark:bg-slate-900
-      lg:block
-    ">
+    <>
+      {/* Mobile backdrop — click to close the drawer */}
+      <div
+        onClick={onClose}
+        aria-hidden="true"
+        className={`
+          fixed inset-0
+          z-40
+          bg-slate-900/50
+          transition-opacity
+          lg:hidden
+          ${isOpen ? "opacity-100" : "pointer-events-none opacity-0"}
+        `}
+      />
 
-      <div className="
-        flex h-20
-        items-center
-        border-b
+      <aside className={`
+        fixed left-0 top-0
+        z-50 flex h-screen
+        w-64 flex-col
+        border-r
         border-slate-200
-        px-6
+        bg-white
+        transition-transform duration-300 ease-in-out
         dark:border-slate-800
-      ">
+        dark:bg-slate-900
+        lg:z-40 lg:translate-x-0
+        ${isOpen ? "translate-x-0" : "-translate-x-full"}
+      `}
+      >
+
         <div className="
-          flex items-center gap-3
+          flex h-20 shrink-0
+          items-center justify-between
+          border-b
+          border-slate-200
+          px-6
+          dark:border-slate-800
         ">
           <div className="
-            flex h-10 w-10
-            items-center justify-center
-            rounded-xl
-            bg-indigo-600
-            font-bold text-white
+            flex items-center gap-3
           ">
-           <Handshake size={20} />
+            <div className="
+              flex h-10 w-10
+              shrink-0
+              items-center justify-center
+              rounded-xl
+              bg-indigo-600
+              font-bold text-white
+            ">
+             <Handshake size={20} />
+            </div>
+
+            <div>
+              <h1 className="
+                font-bold
+              ">
+              <a href="/admin">LeadFlow</a>
+                
+              </h1>
+
+              <p className="
+                text-xs
+                text-slate-500
+                dark:text-slate-400
+              ">
+                Client CRM
+              </p>
+            </div>
           </div>
 
-          <div>
-            <h1 className="
-              font-bold
-            ">
-            <a href="/admin">LeadFlow</a>
-              
-            </h1>
-
-            <p className="
-              text-xs
+          <button
+            onClick={onClose}
+            aria-label="Close menu"
+            className="
+              flex h-9 w-9
+              items-center justify-center
+              rounded-lg
               text-slate-500
+              hover:bg-slate-100
               dark:text-slate-400
-            ">
-              Client CRM
-            </p>
-          </div>
+              dark:hover:bg-slate-800
+              lg:hidden
+            "
+          >
+            <X size={20} />
+          </button>
         </div>
-      </div>
 
-      <nav className="p-4">
+        <nav className="flex-1 overflow-y-auto p-4">
         <p className="
           mb-3 px-3
           text-xs font-semibold
@@ -122,11 +158,11 @@ function Sidebar() {
             );
           })}
         </div>
-      </nav>
+        </nav>
 
-      <div className="
-        absolute bottom-0
-        w-full border-t
+        <div className="
+        shrink-0
+        border-t
         border-slate-200
         p-4
         dark:border-slate-800
@@ -148,8 +184,9 @@ function Sidebar() {
 
           Logout
         </button>
-      </div>
-    </aside>
+        </div>
+      </aside>
+    </>
   );
 }
 

@@ -4,8 +4,8 @@ import { Eye, EyeOff, LockKeyhole, Mail } from "lucide-react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
-import useAuthStore from "../store/authStore";
-import ThemeToggle from "../components/common/ThemeToggle";
+import useAuthStore from "../../store/authStore";
+import ThemeToggle from "../common/ThemeToggle";
 
 function Login() {
   const navigate = useNavigate();

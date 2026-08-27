@@ -92,6 +92,8 @@ function Home() {
               Future
             </a>
 
+
+
           </nav>
 
 
@@ -103,22 +105,21 @@ function Home() {
               href="/login"
               className="rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5 hover:bg-blue-700"
             >
-             Login
+              Login
             </a>
 
           </div>
 
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
 
-          <button
-            onClick={() => setMobileMenu(!mobileMenu)}
-            className="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 dark:border-white/10 md:hidden"
-          >
-            {mobileMenu ? (
-              <X size={20} />
-            ) : (
-              <Menu size={20} />
-            )}
-          </button>
+            <button
+              onClick={() => setMobileMenu(!mobileMenu)}
+              className="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 dark:border-white/10"
+            >
+              {mobileMenu ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
 
         </div>
 
@@ -159,13 +160,14 @@ function Home() {
                 Future
               </a>
 
-              <button
-                onClick={toggleTheme}
-                className="flex items-center gap-2 text-left text-sm font-medium"
+
+
+              <a
+                href="/login"
+                className="rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5 hover:bg-blue-700"
               >
-                {dark ? <Sun size={17} /> : <Moon size={17} />}
-                {dark ? "Light Mode" : "Dark Mode"}
-              </button>
+                Login
+              </a>
 
             </div>
 
@@ -269,7 +271,7 @@ function Home() {
             </div>
 
 
-            <div className="relative mx-auto h-[520px] w-full max-w-[650px] animate-fade-right">
+            <div className="relative mx-auto h-[360px] w-full max-w-[650px] animate-fade-right sm:h-[440px] lg:h-[520px]">
 
               <div className="absolute bottom-0 right-0 h-[88%] w-[82%] rounded-[100px_30px_100px_30px] bg-blue-600 transition-transform duration-700 hover:rotate-1" />
 
@@ -280,7 +282,7 @@ function Home() {
               />
 
 
-              <div className="absolute bottom-10 left-0 flex animate-float items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-2xl dark:border-white/10 dark:bg-[#111c2d]">
+              <div className="absolute bottom-4 left-0 flex max-w-[85%] animate-float items-center gap-3 rounded-2xl border border-slate-200 bg-white p-3 shadow-2xl dark:border-white/10 dark:bg-[#111c2d] sm:bottom-10 sm:max-w-none sm:p-4">
 
                 <div className="grid h-11 w-11 place-items-center rounded-xl bg-blue-100 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400">
                   <Users size={20} />
@@ -347,7 +349,7 @@ function Home() {
               <img
                 src={imageC}
                 alt="People discussing business in an office"
-                className="relative h-[500px] w-full rounded-[40px_12px_40px_12px] object-cover shadow-2xl"
+                className="relative h-[300px] w-full rounded-[40px_12px_40px_12px] object-cover shadow-2xl sm:h-[380px] lg:h-[500px]"
               />
 
 
@@ -656,18 +658,18 @@ function Home() {
             </div>
 
 
-            <div className="relative grid min-h-[500px] grid-cols-2 gap-5">
+            <div className="relative grid min-h-[280px] grid-cols-2 gap-3 sm:min-h-[500px] sm:gap-5">
 
               <img
                 src={imageD}
                 alt="Office team collaborating"
-                className="mt-12 h-[350px] w-full rounded-[100px_20px_100px_20px] object-cover shadow-xl transition duration-500 hover:-translate-y-3"
+                className="mt-6 h-[220px] w-full rounded-[60px_16px_60px_16px] object-cover shadow-xl transition duration-500 hover:-translate-y-3 sm:mt-12 sm:h-[350px] sm:rounded-[100px_20px_100px_20px]"
               />
 
               <img
                 src={imageE}
                 alt="Business people working together"
-                className="h-[350px] w-full rounded-[20px_100px_20px_100px] object-cover shadow-xl transition duration-500 hover:-translate-y-3"
+                className="h-[220px] w-full rounded-[16px_60px_16px_60px] object-cover shadow-xl transition duration-500 hover:-translate-y-3 sm:h-[350px] sm:rounded-[20px_100px_20px_100px]"
               />
 
 
@@ -692,7 +694,7 @@ function Home() {
               <img
                 src={imageF}
                 alt="Business analytics dashboard"
-                className="h-[500px] w-full rounded-[30px_100px_30px_100px] object-cover shadow-2xl"
+                className="h-[300px] w-full rounded-[30px_100px_30px_100px] object-cover shadow-2xl sm:h-[380px] lg:h-[500px]"
               />
 
 
@@ -798,7 +800,7 @@ function Home() {
                 <img
                   src={imageA}
                   alt="Customer support team"
-                  className="h-[400px] w-full rounded-[100px_20px_100px_20px] object-cover shadow-2xl"
+                  className="h-[280px] w-full rounded-[100px_20px_100px_20px] object-cover shadow-2xl sm:h-[400px]"
                 />
 
                 <div className="absolute -bottom-5 -right-5 grid h-20 w-20 place-items-center rounded-2xl bg-blue-600 shadow-xl">
@@ -908,7 +910,7 @@ function Home() {
                 <img
                   src={imageG}
                   alt="Professionals collaborating in an office"
-                  className="relative h-[500px] w-full rounded-[20px_100px_20px_100px] object-cover shadow-2xl"
+                  className="relative h-[300px] w-full rounded-[20px_100px_20px_100px] object-cover shadow-2xl sm:h-[380px] lg:h-[500px]"
                 />
 
                 <div className="absolute -bottom-6 -left-6 rounded-2xl bg-blue-600 p-6 text-white shadow-2xl">
@@ -1073,7 +1075,7 @@ function Home() {
       <footer className="border-t border-slate-200 bg-white dark:border-white/10 dark:bg-[#07101f]">
 
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 px-5 py-3 sm:flex-row sm:items-center lg:px-8">
-        
+
           <div className="
               flex h-20
              items-center
@@ -1112,7 +1114,7 @@ function Home() {
                 </p>
               </div>
             </div>
-           
+
           </div>
 
 

@@ -23,7 +23,7 @@ import {
 
 import toast from "react-hot-toast";
 
-import leadService from "../services/leadService";
+import leadService from "../../services/leadService";
 
 function Analytics() {
   const [stats, setStats] = useState({

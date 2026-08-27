@@ -2,10 +2,9 @@ import { useEffect, useMemo, useState } from "react";
 import { Search, Plus, Eye, Pencil, Trash2, Filter, Torus, } from "lucide-react";
 import toast from "react-hot-toast";
 
-import leadService from "../services/leadService";
-import Modal from "../components/common/Modal";
-import LeadForm from "../components/leads/LeadForm";
-// import LeadDetails from "../components/leads/LeadDetails";
+import leadService from "../../services/leadService";
+import Modal from "../common/Modal";
+import LeadForm from "./LeadForm";
 import { Link } from "react-router-dom";
 
 

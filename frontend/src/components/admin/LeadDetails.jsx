@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
-import leadService from "../services/leadService";
+import leadService from "../../services/leadService";
 
 const STATUSES = [
   "new",

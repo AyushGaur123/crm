@@ -1,6 +1,6 @@
 import { Navigate } from "react-router-dom";
 import useAuthStore from "../../store/authStore";
-import PageSkeleton from "../common/PageSkeleton";
+import PageSkeleton from "./PageSkeleton";
 
 function ProtectedRoute({ children }) {
   const {

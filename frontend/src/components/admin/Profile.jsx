@@ -9,8 +9,8 @@ import {
   CircleUserRound,
 } from "lucide-react";
 
-import useAuthStore from "../store/authStore";
-import PageSkeleton from "../components/common/PageSkeleton";
+import useAuthStore from "../../store/authStore";
+import PageSkeleton from "../common/PageSkeleton";
 
 function Profile() {
   const user = useAuthStore(

@@ -8,10 +8,10 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import useAuthStore from "../store/authStore";
-import FollowUpSection from "../components/admin/FollowUpSection";
-import imageA from '../assets/imageA.avif';
-import imageB from '../assets/imageB.avif';
+import useAuthStore from "../../store/authStore";
+import FollowUpSection from "./FollowUpSection";
+import imageA from '../../assets/imageA.avif';
+import imageB from '../../assets/imageB.avif';
 
 function getGreeting() {
   const hour = new Date().getHours();
@@ -204,7 +204,7 @@ function Admin() {
           {/* =================================================
               RIGHT SIDE - IMAGES
           ================================================== */}
-          <div className="relative mx-auto h-[420px] w-full max-w-[540px]">
+          <div className="relative mx-auto h-[260px] w-full max-w-[540px] sm:h-[340px] lg:h-[420px]">
 
             {/* Main large image */}
             <motion.div
@@ -223,7 +223,7 @@ function Admin() {
               <img
                 src={imageA}
                 alt="Business team meeting"
-                className="h-[280px] w-full object-cover"
+                className="h-[170px] w-full object-cover sm:h-[220px] lg:h-[280px]"
               />
 
               {/* image overlay */}
@@ -254,7 +254,7 @@ function Admin() {
               <img
                 src={imageB}
                 alt="Team collaboration"
-                className="h-[220px] w-full object-cover"
+                className="h-[135px] w-full object-cover sm:h-[175px] lg:h-[220px]"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

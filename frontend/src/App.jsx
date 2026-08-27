@@ -7,24 +7,24 @@ import {
 import { useEffect } from "react";
 
 import DashboardLayout from "./components/layout/DashboardLayout";
-import ProtectedRoute from "./components/auth/ProtectedRoute";
+import ProtectedRoute from "./components/common/ProtectedRoute";
 
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import Leads from "./pages/Leads";
-import Analytics from "./pages/Analytics";
+import Login from "./components/auth/Login";
+import Dashboard from "./components/admin/Dashboard";
+import Leads from "./components/admin/Leads";
+import Analytics from "./components/admin/Analytics";
 import NotFound from "./pages/NotFound";
 
 import PublicContact from "./pages/PublicContact";
 import Home from "./pages/Home";
-import Admin from "./pages/Admin";
+import Admin from "./components/admin/Admin";
 
 import useAuthStore from "./store/authStore";
-import Profile from "./pages/Profile";
+import Profile from "./components/admin/Profile";
 
-import LeadDetails from "./pages/LeadDetails";
+import LeadDetails from "./components/admin/LeadDetails";
 
-import Register from "./pages/Register";
+import Register from "./components/auth/Register";
 
 import PublicHomeRoute from "./components/auth/PublicHomeRoute";
 

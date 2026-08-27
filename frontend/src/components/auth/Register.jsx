@@ -13,8 +13,8 @@ import {
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
-import authService from "../services/authService";
-import ThemeToggle from "../components/common/ThemeToggle";
+import authService from "../../services/authService";
+import ThemeToggle from "../common/ThemeToggle";
 
 function Register() {
   const navigate = useNavigate();

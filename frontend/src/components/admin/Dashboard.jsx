@@ -24,9 +24,9 @@ import { Link } from "react-router-dom";
 
 import toast from "react-hot-toast";
 
-import StatCard from "../components/dashboard/StatCard";
+import StatCard from "../common/StatCard";
 
-import leadService from "../services/leadService";
+import leadService from "../../services/leadService";
 
 
 function Dashboard() {
