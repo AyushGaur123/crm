@@ -18,7 +18,7 @@ import {
   getFollowUps,
   getDashboardStats,
   getAdvancedAnalytics,
-} from "../controllers/leadController.js";
+} from "../controllers/leads/index.js";
 
 import protect from "../middleware/authMiddleware.js";
 

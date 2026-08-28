@@ -60,9 +60,6 @@ function Dashboard() {
           leadService.getLeads(),
         ]);
 
-        
-// const dashboard = await leadService.getDashboardStats();
-console.log(dashboard.conversionTrend);
 
       // Dashboard statistics
       setStats(

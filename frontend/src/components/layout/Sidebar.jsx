@@ -86,7 +86,7 @@ function Sidebar({ isOpen = false, onClose = () => {} }) {
               <h1 className="
                 font-bold
               ">
-              <a href="/admin">LeadFlow</a>
+              <a href="/admin">LeadNova</a>
                 
               </h1>
 

@@ -76,8 +76,7 @@ function Register() {
       </div>
 
 
-      {/* Page */}
-
+     
       <div
         className="
           flex
@@ -89,7 +88,7 @@ function Register() {
         "
       >
 
-        {/* Card */}
+      
 
         <div
           className="
@@ -109,7 +108,7 @@ function Register() {
           "
         >
 
-          {/* Header */}
+         
 
           <div className="mb-4 text-center">
 
@@ -155,14 +154,13 @@ function Register() {
           </div>
 
 
-          {/* Form */}
 
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="space-y-3"
           >
 
-            {/* Name */}
+          
 
             <div>
 
@@ -228,7 +226,7 @@ function Register() {
             </div>
 
 
-            {/* Email */}
+          
 
             <div>
 
@@ -294,8 +292,7 @@ function Register() {
             </div>
 
 
-            {/* Password */}
-
+          
             <div>
 
               <label
@@ -391,7 +388,7 @@ function Register() {
             </div>
 
 
-            {/* Company */}
+          
 
             <div>
 
@@ -457,7 +454,7 @@ function Register() {
             </div>
 
 
-            {/* Description */}
+        
 
             <div>
 
@@ -517,7 +514,7 @@ function Register() {
             </div>
 
 
-            {/* Button */}
+           
 
             <button
               type="submit"
@@ -544,7 +541,7 @@ function Register() {
           </form>
 
 
-          {/* Login */}
+          
 
           <p
             className="

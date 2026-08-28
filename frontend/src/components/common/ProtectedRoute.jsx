@@ -8,7 +8,6 @@ function ProtectedRoute({ children }) {
     initialized,
   } = useAuthStore();
 
-  // Wait for /api/auth/me
   if (!initialized) {
     return <PageSkeleton />;
   }

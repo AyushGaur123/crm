@@ -117,11 +117,11 @@ const getLeadById = async (id) => {
 
 const updateLeadStatus = async (
   id,
-  status
+  status,lostReason
 ) => {
   const response = await api.patch(
     `/leads/${id}/status`,
-    { status }
+    { status,lostReason }
   );
 
   return response.data;
@@ -170,6 +170,9 @@ const leadService = {
   getDashboardStats,
   getAdvancedAnalytics,
 };
+
+
+
 
 
 

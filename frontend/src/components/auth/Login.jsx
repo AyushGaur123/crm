@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
-import { Eye, EyeOff, LockKeyhole, Mail } from "lucide-react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { ArrowLeft, Eye, EyeOff, LockKeyhole, Mail } from "lucide-react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
@@ -54,6 +54,10 @@ function Login() {
       dark:bg-slate-950
       dark:text-white
     ">
+     <div className="absolute left-6 top-6">
+      <Link to="/"> <ArrowLeft/>
+      </Link>
+     </div>
       <div className="absolute right-6 top-6">
         <ThemeToggle />
       </div>
@@ -89,7 +93,7 @@ function Login() {
             <h1 className="
               text-2xl font-bold
             ">
-              Welcome to LeadFlow
+              Welcome to LeadNova
             </h1>
 
             <p className="

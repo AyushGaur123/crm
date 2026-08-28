@@ -46,7 +46,7 @@ function Home() {
                 <h1 className="
               font-bold
             ">
-                  <a href="#home">LeadFlow</a>
+                  <a href="#home">LeadNova</a>
 
                 </h1>
 
@@ -1101,7 +1101,7 @@ function Home() {
                 <h1 className="
               font-bold
             ">
-                  <a href="#home">LeadFlow</a>
+                  <a href="#home">LeadNova</a>
 
                 </h1>
 
@@ -1119,7 +1119,7 @@ function Home() {
 
 
           <p className="text-xs text-slate-500 dark:text-slate-400">
-            © {new Date().getFullYear()} LeadFlow. All rights reserved.
+            © {new Date().getFullYear()} LeadNova, All rights reserved.
           </p>
 
         </div>

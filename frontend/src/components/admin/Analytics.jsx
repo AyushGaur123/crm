@@ -46,36 +46,21 @@ function Analytics() {
 
   const [loading, setLoading] = useState(true);
 
-  // =========================================================
-  // LOAD ANALYTICS
-  // =========================================================
+ 
 
   useEffect(() => {
     const fetchAnalytics = async () => {
       try {
         setLoading(true);
 
-        // Get normal statistics
         const statsResponse =
           await leadService.getStats();
 
-        // Get advanced analytics
         const advancedResponse =
           await leadService.getAdvancedAnalytics();
 
-        console.log(
-          "STATS RESPONSE:",
-          statsResponse
-        );
-
-        console.log(
-          "ADVANCED ANALYTICS RESPONSE:",
-          advancedResponse
-        );
-
-        // =====================================================
-        // NORMAL STATS
-        // =====================================================
+       
+      
 
         setStats(
           statsResponse?.stats || {
@@ -93,9 +78,7 @@ function Analytics() {
           }
         );
 
-        // =====================================================
-        // LEAD SOURCES
-        // =====================================================
+       
 
         setSources(
           statsResponse?.sources ||
@@ -103,9 +86,7 @@ function Analytics() {
             []
         );
 
-        // =====================================================
-        // SOURCE CONVERSION
-        // =====================================================
+      
 
         const rawSourceConversion =
           advancedResponse?.sourceConversion ||
@@ -113,10 +94,7 @@ function Analytics() {
           advancedResponse?.analytics?.sourceConversion ||
           [];
 
-        console.log(
-          "RAW SOURCE CONVERSION:",
-          rawSourceConversion
-        );
+        
 
         const formattedSourceConversion =
           Array.isArray(rawSourceConversion)
@@ -146,9 +124,7 @@ function Analytics() {
           formattedSourceConversion
         );
 
-        // =====================================================
-        // LOST REASONS
-        // =====================================================
+      
 
         const rawLostReasons =
           advancedResponse?.lostReasons ||
@@ -156,10 +132,7 @@ function Analytics() {
           advancedResponse?.analytics?.lostReasons ||
           [];
 
-        console.log(
-          "RAW LOST REASONS:",
-          rawLostReasons
-        );
+        
 
         const formattedLostReasons =
           Array.isArray(rawLostReasons)
@@ -200,9 +173,6 @@ function Analytics() {
     fetchAnalytics();
   }, []);
 
-  // =========================================================
-  // LEAD PIPELINE DATA
-  // =========================================================
 
   const statusData = [
     {
@@ -277,9 +247,7 @@ function Analytics() {
       0
     );
 
-  // =========================================================
-  // PIPELINE TOOLTIP
-  // =========================================================
+ 
 
   const CustomPipelineTooltip = ({
     active,
@@ -356,10 +324,7 @@ function Analytics() {
     );
   };
 
-  // =========================================================
-  // SOURCE DATA
-  // =========================================================
-
+ 
   const sourceData = sources.map(
     (item) => ({
       name:
@@ -377,10 +342,7 @@ function Analytics() {
     })
   );
 
-  // =========================================================
-  // SUMMARY CARDS
-  // =========================================================
-
+ 
   const activeLeads =
     Number(stats.new || 0) +
     Number(stats.contacted || 0) +
@@ -428,9 +390,6 @@ function Analytics() {
     },
   ];
 
-  // =========================================================
-  // RENDER
-  // =========================================================
 
   return (
     <div className="space-y-8">
@@ -449,7 +408,6 @@ function Analytics() {
       </div>
 
 
-      {/* SUMMARY CARDS */}
 
       <div
         className="
@@ -518,7 +476,6 @@ function Analytics() {
       </div>
 
 
-      {/* MAIN ANALYTICS */}
 
       <div
         className="
@@ -529,9 +486,7 @@ function Analytics() {
         "
       >
 
-        {/* ===================================================
-            LEAD PIPELINE
-        =================================================== */}
+       
 
         <div
           className="
@@ -665,9 +620,6 @@ function Analytics() {
         </div>
 
 
-        {/* ===================================================
-            LEAD SOURCES
-        =================================================== */}
 
         <div
           className="
@@ -777,9 +729,7 @@ function Analytics() {
         </div>
 
 
-        {/* ===================================================
-            SOURCE CONVERSION
-        =================================================== */}
+       
 
         <div
           className="
@@ -903,10 +853,6 @@ function Analytics() {
         </div>
 
 
-        {/* ===================================================
-            LOST REASONS
-        =================================================== */}
-
         <div
           className="
             rounded-2xl
@@ -1021,9 +967,6 @@ function Analytics() {
 }
 
 
-// =============================================================
-// EMPTY CHART
-// =============================================================
 
 function EmptyChart({
   icon,
