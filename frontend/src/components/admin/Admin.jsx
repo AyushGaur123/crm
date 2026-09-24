@@ -41,12 +41,9 @@ function Admin() {
   return (
     <div className="space-y-8 pb-10">
 
-      {/* =====================================================
-          HERO / INTRO SECTION
-      ====================================================== */}
+   
       <section className="relative min-h-[600px] overflow-hidden rounded-[2rem] border border-gray-200 bg-gradient-to-br from-blue-50 via-white to-purple-50 shadow-xl dark:border-gray-800 dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950">
 
-        {/* Background blobs */}
         <motion.div
           animate={{
             x: [0, 40, 0],
@@ -89,9 +86,7 @@ function Admin() {
 
         <div className="relative z-10 grid min-h-[600px] items-center gap-10 px-6 py-14 lg:grid-cols-2 lg:px-12 lg:py-16">
 
-          {/* =================================================
-              LEFT SIDE - TEXT
-          ================================================== */}
+    
           <div className="max-w-2xl">
 
             {/* Small badge */}
@@ -201,9 +196,7 @@ function Admin() {
             </motion.div>
           </div>
 
-          {/* =================================================
-              RIGHT SIDE - IMAGES
-          ================================================== */}
+          
           <div className="relative mx-auto h-[260px] w-full max-w-[540px] sm:h-[340px] lg:h-[420px]">
 
             {/* Main large image */}
