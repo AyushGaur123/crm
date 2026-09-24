@@ -1,6 +1,5 @@
 import { findCompanyLead } from "./helpers.js";
 
-// POST /api/leads/:id/notes
 export const addNote = async (req, res) => {
   try {
     const { text } = req.body;
@@ -27,7 +26,6 @@ export const addNote = async (req, res) => {
   }
 };
 
-// DELETE /api/leads/:id/notes/:noteId
 export const deleteNote = async (req, res) => {
   try {
     const { id, noteId } = req.params;

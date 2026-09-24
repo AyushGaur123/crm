@@ -370,12 +370,7 @@ function Leads() {
                          
                         </button>
 
-                        {/* <Link
-                          to={`/admin/leads/${lead._id}`}
-                        >
-                          <Torus size={17} />
-                         
-                        </Link> */}
+                       
 
                         <button
                           onClick={() => {
