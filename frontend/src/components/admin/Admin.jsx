@@ -199,7 +199,6 @@ function Admin() {
           
           <div className="relative mx-auto h-[260px] w-full max-w-[540px] sm:h-[340px] lg:h-[420px]">
 
-            {/* Main large image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8, x: 60 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -219,7 +218,6 @@ function Admin() {
                 className="h-[170px] w-full object-cover sm:h-[220px] lg:h-[280px]"
               />
 
-              {/* image overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
               <div className="absolute bottom-4 left-4">
@@ -233,7 +231,6 @@ function Admin() {
               </div>
             </motion.div>
 
-            {/* Secondary image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.7, x: -50, y: 50 }}
               animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
